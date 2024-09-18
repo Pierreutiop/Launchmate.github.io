@@ -1,0 +1,210 @@
+/* Importer la police Poppins depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corps du site */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(to bottom, #e0f7fa, #f4f4f4); /* Ajout d'un dégradé pour l'arrière-plan */
+    padding-bottom: 80px; /* Espace pour le footer */
+}
+
+/* En-tête */
+header {
+    background: linear-gradient(90deg, #0078d4, #0056a0); /* Dégradé bleu */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-decoration: underline dotted; /* Soulignement stylisé */
+}
+
+/* Navigation */
+nav {
+    background: #004080;
+    color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+    border-bottom: 2px solid #ffd700;
+}
+
+/* Section principale */
+main {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png'); /* Texture de fond */
+    border: 2px solid #0078d4;
+    position: relative;
+}
+
+/* Chatbox */
+#chatbox, #chatbox-comptabilite {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 2rem auto;
+    border: 2px solid #0078d4;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #f0f4f8;
+}
+
+#messages, #messages-comptabilite {
+    padding: 1rem;
+    height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #0078d4;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.user-message, .bot-message {
+    padding: 0.7rem 1.2rem;
+    border-radius: 16px;
+    margin-bottom: 0.8rem;
+    max-width: 75%;
+    font-size: 1rem;
+}
+
+.user-message {
+    background: #0078d4;
+    color: #fff;
+    align-self: flex-end;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bot-message {
+    background: #e2e6ea;
+    color: #333;
+    align-self: flex-start;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#input-container, #input-container-comptabilite {
+    display: flex;
+    border-top: 2px solid #0078d4;
+    background: #e9f1f7;
+}
+
+#user-input, #user-input-comptabilite {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 0;
+    background-color: #f7fbff;
+    color: #333;
+}
+
+#send-btn, #send-btn-comptabilite {
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
+}
+
+#send-btn:hover, #send-btn-comptabilite:hover {
+    background: #004080;
+}
+
+/* Footer */
+footer {
+    background: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 0.7rem 0;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    #chatbox, #chatbox-comptabilite {
+        width: 100%;
+    }
+
+    footer {
+        font-size: 0.875rem;
+    }
+}
